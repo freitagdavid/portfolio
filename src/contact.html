@@ -10,25 +10,23 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="viewport" content="width=device-width,initial-scale=1" />
-        <title>title</title>
-        <meta name="author" content="name" />
-        <meta name="description" content="description here" />
-        <meta name="keywords" content="keywords,here" />
+        <title>David Freitag</title>
+        <meta name="author" content="David Freitag" />
+        <meta name="description" content="Portfolio site for David Freitag" />
+        <meta
+            name="keywords"
+            content="developer,javascript,web developer,react,node,frontend"
+        />
         <!-- <link
             rel="shortcut icon"
             href="favicon.ico"
             type="image/vnd.microsoft.icon"
             /> -->
         <link
+            href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i|Montserrat:400,700|Open+Sans:400,700&display=swap"
             rel="stylesheet"
-            href="//fonts.googleapis.com/css?family=font1|font2|etc"
-            type="text/css"
         />
-        <link
-            rel="stylesheet"
-            href="https://bundle.run/normalize.css@8.0.1"
-            type="text/css"
-        />
+        <link rel="stylesheet" href="styles/reset.css" type="text/css" />
         <link rel="stylesheet" href="styles/index.scss" type="text/css" />
     </head>
 
@@ -49,42 +47,48 @@
             else window.onload = autorun;
         </script>
         <header>
+            <h2 class="nav_header nav_item">
+                <a href="index.html">
+                    David Freitag
+                </a>
+            </h2>
             <nav>
                 <ul>
-                    <li>
-                        <a href="index.html"><h1>David Freitag</h1></a>
+                    <li class="nav_item">
+                        <a href="./portfolio.html">Portfolio</a>
                     </li>
-                    <li>Portfolio</li>
-                    <li>Contact</li>
+                    <li class="nav_item selected">
+                        <a href="./contact.html">Contact</a>
+                    </li>
                 </ul>
             </nav>
         </header>
         <main>
             <div class="hero">
-                <img src="img/me.jpg" alt="An image of myself" />
+                <img class="avatar" src="img/me.jpg" alt="An image of myself" />
                 <h1>David Freitag</h1>
-                <h2>Full Stack Developer</h2>
+                <h3>Full Stack Developer</h3>
             </div>
-            <article>
-                <h2>About Me</h2>
-                <p>Hi I'm David, nice to meet you.</p>
-                <p>
-                    I guess I should tell you a couple things about myself. I'm
-                    a full stack developer with experience in javascript, react,
-                    node, python, and a little bit of C. But don't let that fool
-                    you I'm always up for learning a new language. To give a bit
-                    of background I was working a job as a back office operator
-                    at a credit union data processor. I did that for about a
-                    year then I decided that it wasn't for me. I have always had
-                    an interest in programming but I never did anything with it
-                    until I decided to go to Lambda. Doing this has been one of
-                    the best decisions I have ever made.
-                </p>
-                <p>
-                    If you would be interested in talking to me please feel free
-                    to <a href="contact.html">contact me</a>
-                </p>
-            </article>
+            <div class="contact">
+                <a href="mailto:david@freitag.site">Send me an email</a>
+                <a href="https://www.linkedin.com/in/david-freitag-b49792106/"
+                    >Linkedin</a
+                >
+                <a href="https://github.com/freitagdavid">Github</a>
+            </div>
+            <!-- <form method=POST class="contact_form" action="mailto:david@freitag.site">
+                <fieldset name="name">
+                    <label for="name">Name</label>
+                    <label for="firstName">First: </label>
+                    <input name="firstName" />
+                    <label for="lastName">Last: </label>
+                    <input name="lastName" />
+                </fieldset>
+                <label for="email">Email Address: </label>
+                <input name="email" />
+                <textarea></textarea>
+            </form> -->
+            <button type="submit"></button>
         </main>
     </body>
 </html>

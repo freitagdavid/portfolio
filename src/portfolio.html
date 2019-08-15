@@ -17,8 +17,13 @@
             name="keywords"
             content="developer,javascript,web developer,react,node,frontend"
         />
+        <!-- <link
+            rel="shortcut icon"
+            href="favicon.ico"
+            type="image/vnd.microsoft.icon"
+            /> -->
         <link
-            href="https://fonts.googleapis.com/css?family=Merriweather&display=swap"
+            href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i|Montserrat:400,700|Open+Sans:400,700&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="styles/reset.css" type="text/css" />
@@ -49,7 +54,7 @@
             </h2>
             <nav>
                 <ul>
-                    <li class="nav_item">
+                    <li class="nav_item selected">
                         <a href="./portfolio.html">Portfolio</a>
                     </li>
                     <li class="nav_item">
@@ -64,26 +69,31 @@
                 <h1>David Freitag</h1>
                 <h3>Full Stack Developer</h3>
             </div>
-            <article>
-                <h3>About me</h3>
-                <p>Hi I'm David, nice to meet you,</p>
-                <p>
-                    I guess I should tell you a couple things about myself. I'm
-                    a full stack developer with experience in javascript, react,
-                    node, python, and a little bit of C. But don't let that fool
-                    you I'm always up for learning a new language. To give a bit
-                    of background I was working a job as a back office operator
-                    at a credit union data processor. I did that for about a
-                    year then I decided that it wasn't for me. I have always had
-                    an interest in programming but I never did anything with it
-                    until I decided to go to Lambda. Doing this has been one of
-                    the best decisions I have ever made.
-                </p>
-                <p>
-                    If you would be interested in talking to me please feel free
-                    to <a href="contact.html">contact me</a>
-                </p>
-            </article>
+            <ul class="projects">
+                <li>
+                    <article class="project">
+                        <h4>Gotta Catch 'Em All</h4>
+                        <div class="project_content">
+                            <img src="./img/p1screenshot.png" />
+                            <p>
+                                This is a simple little app I made for keeping
+                                track of your progress on a nationaldex. I plan
+                                to add some more features in the future how you
+                                enjoy!
+                            </p>
+                            <div class="project_links">
+                                <a
+                                    href="https://github.com/freitagdavid/national_dex_tracker"
+                                    >Github</a
+                                >
+                                <a href="https://pokedex.freitag.site/"
+                                    >Live Site</a
+                                >
+                            </div>
+                        </div>
+                    </article>
+                </li>
+            </ul>
         </main>
     </body>
 </html>
