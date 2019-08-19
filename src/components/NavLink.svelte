@@ -5,6 +5,7 @@
 
 <style>
     a {
+        display: flex;
         font-family: "Monsterrat", helvetica neue, Helvetica, Arial, sans-serif;
         font-size: 0.75rem;
         text-transform: uppercase;
@@ -13,12 +14,14 @@
         font-weight: 700;
         line-height: 1.125rem;
         color: inherit;
+        align-items: center;
+        padding: 0 7px;
     }
 
     li {
-        padding: 0 7px;
         height: 100%;
-        align-items: center;
+        align-items: stretch;
+        justify-items: stretch;
         display: flex;
     }
 
