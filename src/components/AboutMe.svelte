@@ -21,17 +21,16 @@
 
 <article>
     <h3>About me</h3>
-    <p>Hi I'm David, nice to meet you,</p>
+    <p>I'm David Freitag, welcome to my portfolio site,</p>
     <p>
-        My name is David Freitagand welcome to my portfolio site. \n I'm a full
-        stack developer with experience in javascript, react, node, python, and
-        a little bit of C. But don't let that fool you I'm always up for
-        learning a new language. To give a bit of background I was working a job
-        as a back office operator at a credit union data processor. I did that
-        for about a year then I decided that it wasn't for me. I have always had
-        an interest in programming but I never did anything with it until I
-        decided to go to Lambda. Doing this has been one of the best decisions I
-        have ever made.
+        I'm a full stack developer with experience in javascript, react, node,
+        python, and a little bit of C. But don't let that fool you I'm always up
+        for learning a new language. To give a bit of background I was working a
+        job as a back office operator at a credit union data processor. I did
+        that for about a year then I decided that it wasn't for me. I have
+        always had an interest in programming but I never did anything with it
+        until I decided to go to Lambda. Doing this has been one of the best
+        decisions I have ever made.
     </p>
     <p>
         If you would be interested in talking to me please feel free to
