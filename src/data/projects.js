@@ -14,6 +14,13 @@ const projects = [
             "This is a simple little app I made for keeping track of your progress on a nationaldex. I plan to add some more features in the future how you enjoy!",
         github: "https://github.com/freitagdavid/national_dex_tracker",
         live: "https://pokedex.freitag.site/"
+    },
+    {
+        name: "Django Blog",
+        screenshot: require("../../img/p3screenshot.png"),
+        description: "A multi-user blogging application. Using a Django backend, PostgreSQL, and django templating with bootstrap 4 for the frontend.",
+        github: "https://github.com/freitagdavid/django_blog",
+        live: "https://dfreitag-django-blog.herokuapp.com/"
     }
 ];
 
