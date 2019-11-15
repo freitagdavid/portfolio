@@ -1,9 +1,10 @@
 <script>
   export let project;
+  import ProjectLink from "./ProjectLink.svelte";
 </script>
 
 <style>
-  li {
+  /* li {
     margin-top: 50px;
   }
 
@@ -68,19 +69,87 @@
     color: #007199;
     background-color: var(--secondary-bg);
     border: solid 1px #007199;
+  } */
+
+  .project-container {
+    margin-top: 50px;
+  }
+
+  article {
+    display: grid;
+    grid-template-columns: 10vw auto auto;
+    grid-template-rows: auto auto auto;
+    border: solid black 1px;
+    border-radius: 6px;
+  }
+
+  .project-title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 0;
+    grid-row-end: 1;
+    border-bottom: 1px solid black;
+    text-align: center;
+    width: 100%;
+  }
+
+  .project-description {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    padding-right: 15px;
+  }
+
+  .project-img {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    align-self: center;
+    justify-self: center;
+    width: 9vw;
+  }
+
+  .project-links {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0;
+  }
+
+  .tech-list {
+    margin-left: 15px;
+    margin-top: 5px;
+    list-style: square;
+  }
+
+  .tech-list-title {
+    margin-top: 15px;
   }
 </style>
 
-<li>
+<li class="project-container">
   <article>
-    <h4>{project.name}</h4>
-    <div>
-      <img src={project.screenshot} />
+    <h4 class="project-title">{project.name}</h4>
+    <img class="project-img" src={project.screenshot} />
+    <div class="project-description">
       <p>{project.description}</p>
-      <div class="project_links">
-        <a href={project.github}>Github</a>
-        <a href={project.live}>Live Site</a>
-      </div>
+      <p class="tech-list-title">Technologies used:</p>
+      <ul class="tech-list">
+        {#each project.technologies as tech}
+          <li>{tech}</li>
+        {/each}
+      </ul>
+    </div>
+    <div class="project-links">
+      <ProjectLink href={project.github}>Github</ProjectLink>
+      <ProjectLink href={project.live}>Live Site</ProjectLink>
     </div>
   </article>
 </li>
