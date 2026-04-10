@@ -9,8 +9,8 @@
         "build": "vite build",
         "preview": "vite preview",
         "check": "svelte-check --tsconfig ./tsconfig.json",
-        "lint": "oxlint",
-        "lint:fix": "oxlint --fix"
+        "lint": "oxlint src",
+        "lint:fix": "oxlint src --fix"
     },
     "author": "",
     "license": "ISC",
