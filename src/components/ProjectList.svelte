@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import projects from "../data/projects";
   import Project from "./Project.svelte";
 </script>

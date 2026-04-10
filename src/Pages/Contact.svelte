@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import NavBar from "../components/NavBar.svelte";
     import Hero from "../components/Hero.svelte";
 </script>
@@ -54,5 +54,4 @@
                 <input name="email" />
                 <textarea></textarea>
             </form> -->
-    <button type="submit"></button>
 </main>

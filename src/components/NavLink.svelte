@@ -1,6 +1,6 @@
-<script>
-    export let href;
-    export let active;
+<script lang="ts">
+    export let href: string;
+    export let active: boolean;
 </script>
 
 <style>
@@ -30,11 +30,11 @@
         background-color: var(--secondary-bg);
     }
 
-    li[active="true"] {
+    li.active {
         color: #00a3df;
     }
 </style>
 
-<li {active}>
+<li class:active={active}>
     <a href="{href}"><slot></slot></a>
 </li>

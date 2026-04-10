@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import NavLink from "./NavLink.svelte";
     import NavHeader from "./NavHeader.svelte";
     import { router } from "svelte-spa-router";

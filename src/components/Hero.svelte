@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import myPicture from "../../img/me.jpg";
 </script>
 
@@ -37,7 +37,7 @@
 </style>
 
 <div>
-    <img src="{myPicture}" alt="An image of myself" />
+    <img src="{myPicture}" alt="David Freitag" />
     <h1>David Freitag</h1>
     <h3>Full Stack Developer</h3>
 </div>

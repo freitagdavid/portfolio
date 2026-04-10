@@ -1,6 +1,8 @@
-<script>
-  export let project;
+<script lang="ts">
+  import type { Project } from "../data/projects";
   import ProjectLink from "./ProjectLink.svelte";
+
+  export let project: Project;
 </script>
 
 <style>
@@ -137,7 +139,11 @@
 <li class="project-container">
   <article>
     <h4 class="project-title">{project.name}</h4>
-    <img class="project-img" src={project.screenshot} />
+    <img
+      class="project-img"
+      src={project.screenshot}
+      alt="Screenshot of {project.name}"
+    />
     <div class="project-description">
       <p>{project.description}</p>
       <p class="tech-list-title">Technologies used:</p>
