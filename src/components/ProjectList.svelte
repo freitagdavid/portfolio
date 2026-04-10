@@ -1,18 +1,19 @@
-<script>
-  import projects from "../data/projects";
-  import Project from "./Project.svelte";
+<script lang="ts">
+    import projects from "../data/projects";
+    import Project from "./Project.svelte";
+    import { theme } from "../lib/theme";
 </script>
 
-<style>
-  ul {
-    max-width: 60%;
-    min-width: 600px;
-    margin: 0 auto;
-  }
-</style>
-
-<ul class="projects">
-  {#each projects as project}
-    <Project {project} />
-  {/each}
-</ul>
+{#if $theme === "rpgui"}
+    <ul class="portfolio-project-list">
+        {#each projects as project}
+            <Project {project} />
+        {/each}
+    </ul>
+{:else}
+    <ul class="m-0 mx-auto w-full max-w-4xl list-none p-0">
+        {#each projects as project}
+            <Project {project} />
+        {/each}
+    </ul>
+{/if}

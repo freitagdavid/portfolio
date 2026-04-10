@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@theme {
+	--font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+	--font-serif: "Merriweather", ui-serif, Georgia, serif;
+
+	--color-page: #f8f6f3;
+	--color-surface: #ffffff;
+	--color-ink: #1a1f24;
+	--color-muted: #5c6670;
+	--color-accent: #0d6b7a;
+	--color-accent-hover: #0a5662;
+	--color-accent-soft: rgba(13, 107, 122, 0.12);
+	--color-line: rgba(26, 31, 36, 0.08);
+	--color-line-strong: rgba(26, 31, 36, 0.14);
+	--color-secondary: #eef2f4;
+
+	--radius-sm: 8px;
+	--radius-md: 14px;
+
+	--shadow-sm: 0 1px 2px rgba(26, 31, 36, 0.06);
+	--shadow-md: 0 8px 24px rgba(26, 31, 36, 0.08);
+}
+
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+
+	body {
+		@apply m-0 transition-colors duration-200;
+	}
+
+	body.theme-body-modern {
+		@apply bg-page;
+	}
+
+	body.theme-body-rpgui {
+		background-color: #1a1209;
+	}
+
+	.theme-modern {
+		@apply min-h-screen bg-page font-serif text-[1.0625rem] leading-[1.7] tracking-wide text-ink antialiased;
+	}
+
+	.theme-modern main {
+		@apply mx-auto max-w-6xl px-5 pb-14;
+	}
+
+	.theme-modern h1,
+	.theme-modern h2,
+	.theme-modern h3,
+	.theme-modern h4 {
+		@apply font-sans font-semibold tracking-tight text-ink leading-tight;
+	}
+
+	.theme-modern h1 {
+		@apply text-[clamp(2rem,4vw,2.75rem)];
+	}
+
+	.theme-modern h2 {
+		@apply text-[clamp(1.35rem,2.5vw,1.65rem)];
+	}
+
+	.theme-modern h3 {
+		@apply text-[clamp(1.15rem,2vw,1.35rem)];
+	}
+
+	.theme-modern h4 {
+		@apply text-[1.05rem] font-semibold;
+	}
+
+	.theme-modern a {
+		@apply text-accent underline decoration-1 underline-offset-[0.2em] transition-colors hover:text-accent-hover;
+	}
+
+	.theme-modern a:focus-visible {
+		@apply rounded-sm outline-2 outline-offset-[3px] outline-accent;
+	}
+}

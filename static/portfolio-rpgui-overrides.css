@@ -1,0 +1,376 @@
+/**
+ * Portfolio layout on top of RPGUI (https://github.com/RonenNess/RPGUI).
+ * RPGUI targets fullscreen fixed-position games; these rules make it work
+ * for a scrolling SPA while keeping frames, textures, and typography.
+ */
+
+.portfolio-root.rpgui-content {
+	position: relative !important;
+	left: auto !important;
+	top: auto !important;
+	min-height: 100vh;
+	height: auto !important;
+	width: 100% !important;
+	overflow-x: hidden !important;
+	overflow-y: auto !important;
+	font-size: 11px;
+	line-height: 1.5;
+	background: #1a1209 url("/rpgui/img/background-image.png") repeat;
+}
+
+@media (min-width: 480px) {
+	.portfolio-root.rpgui-content {
+		font-size: 12px;
+	}
+}
+
+.portfolio-root.rpgui-content p,
+.portfolio-root.rpgui-content h1,
+.portfolio-root.rpgui-content h2,
+.portfolio-root.rpgui-content h3,
+.portfolio-root.rpgui-content h4,
+.portfolio-root.rpgui-content article,
+.portfolio-root.rpgui-content .portfolio-tech-row li,
+.portfolio-root.rpgui-content a:not(.rpgui-button) {
+	-webkit-user-select: text !important;
+	-moz-user-select: text !important;
+	user-select: text !important;
+}
+
+.portfolio-root .rpgui-container {
+	position: relative !important;
+	left: auto !important;
+	top: auto !important;
+	z-index: 1;
+	max-width: 100%;
+}
+
+.portfolio-root .portfolio-nav {
+	position: sticky !important;
+	top: 0;
+	z-index: 100 !important;
+	width: calc(100% - 24px) !important;
+	max-width: 72rem;
+	margin-left: auto !important;
+	margin-right: auto !important;
+	margin-top: 8px;
+	margin-bottom: 8px;
+}
+
+.portfolio-main {
+	max-width: 72rem;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 16px;
+	padding-right: 16px;
+	padding-bottom: 48px;
+}
+
+.portfolio-nav-inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	padding: 4px 8px;
+}
+
+.portfolio-nav-actions {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+}
+
+.portfolio-nav-inner h2,
+.portfolio-nav-inner h2 a {
+	margin: 0 !important;
+	text-align: left !important;
+	font-size: 1em !important;
+}
+
+.portfolio-nav ul {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	align-items: center;
+}
+
+.portfolio-nav li {
+	margin-left: 0 !important;
+	list-style: none !important;
+}
+
+/* Golden buttons as links: flex-center text (RPGUI's float + ::before/::after breaks alignment) */
+.portfolio-root .rpgui-button.golden {
+	display: inline-flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	box-sizing: border-box;
+	text-decoration: none !important;
+	color: inherit !important;
+	vertical-align: middle;
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+	overflow: visible !important;
+	background-size: 100% 100% !important;
+	background-position: center !important;
+}
+
+.portfolio-root .rpgui-button.golden::before,
+.portfolio-root .rpgui-button.golden::after {
+	display: none !important;
+}
+
+.portfolio-root .rpgui-button.golden p {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	color: white;
+	text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+	margin: 0 !important;
+	padding: 0 !important;
+	text-align: center !important;
+	line-height: 1.25 !important;
+}
+
+.portfolio-root .nav-rpgui-btn {
+	min-width: 110px !important;
+	height: 48px !important;
+	padding-left: 20px !important;
+	padding-right: 20px !important;
+}
+
+.portfolio-root .nav-rpgui-btn p {
+	font-size: 0.62em !important;
+}
+
+.portfolio-root .rpgui-button.golden:not(.nav-rpgui-btn) p {
+	font-size: 0.68em !important;
+}
+
+.portfolio-root .nav-rpgui-btn.nav-rpgui-btn-active {
+	filter: brightness(1.12) saturate(1.1);
+}
+
+.portfolio-hero-inner {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 16px;
+	text-align: center;
+	padding: 12px 8px 16px;
+}
+
+.portfolio-root .portfolio-hero-title {
+	font-size: 1.4em !important;
+	line-height: 1.35 !important;
+	margin: 4px 0 0 !important;
+}
+
+.portfolio-root .portfolio-tagline {
+	font-size: 0.82em !important;
+	line-height: 1.5 !important;
+	margin: 0 !important;
+	opacity: 0.95;
+}
+
+.portfolio-hero-avatar img {
+	display: block;
+	width: 112px;
+	height: 112px;
+	object-fit: cover;
+}
+
+.portfolio-project-list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.portfolio-project-list > li + li {
+	margin-top: 2rem;
+}
+
+.portfolio-project {
+	display: flex;
+	flex-direction: column;
+}
+
+.portfolio-project-shot {
+	border-bottom: 2px solid rgba(0, 0, 0, 0.35);
+}
+
+.portfolio-project-body {
+	padding: 12px 16px 8px;
+}
+
+.portfolio-project-body > p {
+	margin: 0 0 12px !important;
+}
+
+.portfolio-project-title h4 {
+	margin: 12px 16px !important;
+}
+
+.portfolio-tech-label {
+	margin: 12px 0 6px !important;
+	font-size: 0.75em !important;
+	text-align: left !important;
+	text-decoration: none !important;
+	opacity: 0.9;
+}
+
+.portfolio-tech-row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	list-style: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.portfolio-tech-row li {
+	margin-left: 0 !important;
+	list-style: none !important;
+	font-size: 0.68em !important;
+	padding: 5px 10px !important;
+	background: rgba(0, 0, 0, 0.4);
+	border: 2px solid rgba(212, 175, 55, 0.5);
+	line-height: 1.35 !important;
+}
+
+.portfolio-project-shot-inner {
+	aspect-ratio: 1 / 1;
+	width: 100%;
+	max-width: 288px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.portfolio-project-shot-inner.rpgui-container.framed-grey {
+	padding: 6px !important;
+}
+
+.portfolio-project-shot-inner img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: top center;
+}
+
+.portfolio-project-actions {
+	border-top: 2px solid rgba(0, 0, 0, 0.25);
+}
+
+.portfolio-project-actions-inner {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 12px;
+	padding: 12px 16px;
+	background: rgba(0, 0, 0, 0.12);
+}
+
+@media (min-width: 720px) {
+	.portfolio-project {
+		display: grid;
+		grid-template-columns: minmax(260px, 300px) minmax(0, 1fr);
+		grid-template-rows: auto 1fr auto;
+	}
+
+	.portfolio-project-title {
+		grid-column: 2;
+		grid-row: 1;
+		border-bottom: none !important;
+	}
+
+	.portfolio-project-title h4 {
+		text-align: left !important;
+		margin-top: 16px !important;
+		margin-bottom: 8px !important;
+	}
+
+	.portfolio-project-shot {
+		grid-column: 1;
+		grid-row: 1 / span 3;
+		align-self: stretch;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border-bottom: none !important;
+		border-right: 2px solid rgba(0, 0, 0, 0.35);
+		padding: 12px;
+	}
+
+	.portfolio-project-shot-inner {
+		width: 288px;
+		max-width: 100%;
+		margin: 0 auto;
+	}
+
+	.portfolio-project-body {
+		grid-column: 2;
+		grid-row: 2;
+	}
+
+	.portfolio-project-actions {
+		grid-column: 2;
+		grid-row: 3;
+	}
+}
+
+.portfolio-about h3 {
+	text-align: left !important;
+}
+
+.portfolio-about p {
+	text-align: left !important;
+	line-height: 1.65 !important;
+}
+
+.portfolio-contact-intro {
+	margin: 0 0 16px !important;
+	text-align: left !important;
+	line-height: 1.55 !important;
+	font-size: 0.95em !important;
+}
+
+.portfolio-contact-links {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.portfolio-contact-row {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	padding: 10px 14px !important;
+	text-decoration: none !important;
+}
+
+.portfolio-contact-row:hover {
+	filter: brightness(1.06);
+}
+
+.portfolio-contact-icon {
+	flex-shrink: 0;
+	width: 40px;
+	height: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: rgba(0, 0, 0, 0.45);
+	border: 2px solid rgba(212, 175, 55, 0.55);
+	font-size: 0.72em !important;
+	line-height: 1 !important;
+}
+
+.portfolio-root a:focus-visible,
+.portfolio-root button:focus-visible {
+	outline: 3px solid #ffd54a !important;
+	outline-offset: 2px;
+}
