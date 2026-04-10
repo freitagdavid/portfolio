@@ -1,6 +1,6 @@
-import p2screenshot from '../../img/p2screenshot.png';
 import p1screenshot from '../../img/p1screenshot.png';
-import p3screenshot from '../../img/p3screenshot.png';
+import p2screenshot from '../../img/p2screenshot.png';
+import munchiezScreenshot from '../../img/munchiez-screenshot.png';
 
 export interface Project {
 	name: string;
@@ -31,13 +31,14 @@ const projects: Project[] = [
 		live: 'https://pokedex.freitag.site/'
 	},
 	{
-		name: 'Django Blog',
-		screenshot: p3screenshot,
-		description: 'A multi-user blogging application.',
-		technologies: ['Django Backend', 'PostgreSQL', 'Django Templating', 'Bootstrap 4'],
-		github: 'https://github.com/freitagdavid/django_blog',
-		live: 'https://dfreitag-django-blog.herokuapp.com/'
-	}
+		name: 'MunchiEZ',
+		screenshot: munchiezScreenshot,
+		description:
+			'A recipe site and food journal: browse dishes in a card grid, filter by tags, and read full posts in the blog. Content lives in markdown, the UI is a React + TypeScript SPA with TanStack Router and Tailwind, and the production build is hosted on GitHub Pages.',
+		technologies: ['React', 'TypeScript', 'Vite', 'TanStack Router', 'Tailwind CSS', 'GitHub Pages'],
+		github: 'https://github.com/freitagdavid/MunchiEZ',
+		live: 'https://freitagdavid.github.io/MunchiEZ/'
+	},
 ];
 
 export default projects;

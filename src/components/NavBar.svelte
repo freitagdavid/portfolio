@@ -4,35 +4,16 @@
     import { router } from "svelte-spa-router";
 </script>
 
-<style>
-    header {
-        width: 97%;
-        display: grid;
-        grid-template-columns: 80% auto;
-        margin: 0 auto;
-        height: 52px;
-        align-items: center;
-    }
-    header nav {
-        height: 100%;
-        display: flex;
-        justify-content: flex-end;
-    }
-    header nav ul {
-        height: 100%;
-        width: 190px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-</style>
-
-<header>
+<header
+    class="sticky top-0 z-50 mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 border-b border-line bg-page/80 px-5 py-2.5 backdrop-blur-md"
+>
     <NavHeader href="#/">David Freitag</NavHeader>
-    <nav>
-        <ul>
-            <NavLink href="#/portfolio" active={router.location === "/portfolio"}>Portfolio</NavLink>
-            <NavLink href="#/contact" active={router.location === "/contact"}>Contact</NavLink>
+    <nav aria-label="Primary">
+        <ul class="m-0 flex list-none items-center gap-1 p-0">
+            <NavLink href="#/portfolio" active={router.location === "/portfolio"}
+                >Portfolio</NavLink>
+            <NavLink href="#/contact" active={router.location === "/contact"}
+                >Contact</NavLink>
         </ul>
     </nav>
 </header>

@@ -1,7 +1,5 @@
 <script lang="ts">
-    import "./reset.css";
-    import "./global.css";
-    import NavBar from "./components/NavBar.svelte";
+    import "./app.css";
     import Router from "svelte-spa-router";
     import routes from "./routes";
 </script>

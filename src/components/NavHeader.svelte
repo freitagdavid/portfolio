@@ -2,21 +2,11 @@
     export let href: string;
 </script>
 
-<style>
-    a {
-        font-family: "Monsterrat", helvetica neue, Helvetica, Arial, sans-serif;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 0.15rem;
-        font-weight: 700;
-        color: inherit;
-        line-height: 1.125rem;
-        font-size: 1.04rem;
-    }
-</style>
-
-<h2>
-    <a href="{href}">
+<h2 class="m-0 text-base font-bold">
+    <a
+        {href}
+        class="font-sans font-bold tracking-tight text-ink no-underline transition-colors hover:text-accent focus-visible:rounded-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+    >
         <slot></slot>
     </a>
 </h2>

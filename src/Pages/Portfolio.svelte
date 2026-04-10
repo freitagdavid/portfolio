@@ -6,7 +6,7 @@
 
 <style></style>
 
-<NavBar> </NavBar>
+<NavBar />
 <main>
     <Hero></Hero>
     <ProjectList></ProjectList>

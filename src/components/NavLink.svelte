@@ -3,38 +3,16 @@
     export let active: boolean;
 </script>
 
-<style>
-    a {
-        display: flex;
-        font-family: "Monsterrat", helvetica neue, Helvetica, Arial, sans-serif;
-        font-size: 0.75rem;
-        text-transform: uppercase;
-        text-decoration: none;
-        letter-spacing: 0.15rem;
-        font-weight: 700;
-        line-height: 1.125rem;
-        color: inherit;
-        align-items: center;
-        padding: 0 7px;
-    }
-
-    li {
-        height: 100%;
-        align-items: stretch;
-        justify-items: stretch;
-        display: flex;
-    }
-
-    li:hover {
-        color: #007199;
-        background-color: var(--secondary-bg);
-    }
-
-    li.active {
-        color: #00a3df;
-    }
-</style>
-
-<li class:active={active}>
-    <a href="{href}"><slot></slot></a>
+<li class="list-none">
+    <a
+        {href}
+        aria-current={active ? "page" : undefined}
+        class="inline-flex items-center rounded-full px-3 py-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.14em] no-underline transition-colors hover:text-accent hover:bg-accent-soft focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+        class:text-muted={!active}
+        class:text-accent={active}
+        class:bg-accent-soft={active}
+        class:font-bold={active}
+    >
+        <slot></slot>
+    </a>
 </li>

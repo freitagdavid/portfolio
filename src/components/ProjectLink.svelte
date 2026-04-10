@@ -1,27 +1,12 @@
 <script lang="ts">
-  export let href: string;
+    export let href: string;
 </script>
 
-<style>
-  a {
-    color: #007199;
-    border-radius: 7px;
-    margin: auto;
-    line-height: 30px;
-    height: 30px;
-    width: 45%;
-    text-align: center;
-    border: solid 1px #0070996b;
-    text-decoration: none;
-  }
-
-  a:hover {
-    color: #007199;
-    background-color: var(--secondary-bg);
-    border: solid 1px #007199;
-  }
-</style>
-
-<a {href}>
-  <slot />
+<a
+    {href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="inline-flex min-w-[7.5rem] flex-1 items-center justify-center rounded-sm border border-line-strong bg-surface px-4 py-2.5 font-sans text-[0.8rem] font-semibold tracking-wide text-accent no-underline shadow-sm transition-[color,background-color,border-color,transform] hover:-translate-y-px hover:border-accent hover:bg-accent hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+>
+    <slot />
 </a>

@@ -3,55 +3,54 @@
     import Hero from "../components/Hero.svelte";
 </script>
 
-<style>
-    div {
-        border: black solid 1px;
-        width: 600px;
-        margin: 0 auto;
-        margin-top: 50px;
-        border-radius: 7px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-    }
-
-    a {
-        border-radius: 7px;
-        padding: 5px;
-        color: inherit;
-        text-decoration: none;
-        align-self: stretch;
-        border: solid 1px rgba(0, 0, 0, 0);
-    }
-
-    a:hover {
-        color: #007199;
-        background-color: var(--secondary-bg);
-        border: solid 1px #007199;
-    }
-</style>
-
-<NavBar></NavBar>
+<NavBar />
 <main>
-    <Hero></Hero>
-    <div>
-        <a href="mailto:david@freitag.site">Send me an email</a>
-        <a href="https://www.linkedin.com/in/david-freitag-b49792106/"
-            >Linkedin</a
+    <Hero />
+    <section
+        class="mx-auto mt-10 max-w-md rounded-md border border-line bg-surface p-6 shadow-md"
+        aria-labelledby="contact-heading"
+    >
+        <h2
+            id="contact-heading"
+            class="m-0 mb-1.5 font-sans text-[1.2rem] font-semibold"
         >
-        <a href="https://github.com/freitagdavid">Github</a>
-    </div>
-    <!-- <form method=POST class="contact_form" action="mailto:david@freitag.site">
-                <fieldset name="name">
-                    <label for="name">Name</label>
-                    <label for="firstName">First: </label>
-                    <input name="firstName" />
-                    <label for="lastName">Last: </label>
-                    <input name="lastName" />
-                </fieldset>
-                <label for="email">Email Address: </label>
-                <input name="email" />
-                <textarea></textarea>
-            </form> -->
+            Contact
+        </h2>
+        <p class="mb-5 text-[0.95rem] leading-relaxed text-muted">
+            Reach out on any of these — I’d love to hear from you.
+        </p>
+        <div class="flex flex-col gap-2">
+            <a
+                href="mailto:david@freitag.site"
+                class="flex items-center gap-3 rounded-sm border border-line bg-page/40 px-4 py-3.5 font-sans text-[0.95rem] font-semibold text-ink no-underline transition-[color,background-color,border-color] hover:border-accent-soft hover:bg-accent-soft hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+                <span
+                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-accent-soft text-[0.85rem] font-bold text-accent"
+                    aria-hidden="true">@</span>
+                <span>Email</span>
+            </a>
+            <a
+                href="https://www.linkedin.com/in/david-freitag-b49792106/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-sm border border-line bg-page/40 px-4 py-3.5 font-sans text-[0.95rem] font-semibold text-ink no-underline transition-[color,background-color,border-color] hover:border-accent-soft hover:bg-accent-soft hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+                <span
+                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-accent-soft text-[0.85rem] font-bold text-accent"
+                    aria-hidden="true">in</span>
+                <span>LinkedIn</span>
+            </a>
+            <a
+                href="https://github.com/freitagdavid"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="flex items-center gap-3 rounded-sm border border-line bg-page/40 px-4 py-3.5 font-sans text-[0.95rem] font-semibold text-ink no-underline transition-[color,background-color,border-color] hover:border-accent-soft hover:bg-accent-soft hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+            >
+                <span
+                    class="flex h-9 w-9 shrink-0 items-center justify-center rounded-sm bg-accent-soft text-[0.85rem] font-bold text-accent"
+                    aria-hidden="true">&lt;/&gt;</span>
+                <span>GitHub</span>
+            </a>
+        </div>
+    </section>
 </main>
