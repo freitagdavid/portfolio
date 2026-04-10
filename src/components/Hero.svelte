@@ -1,5 +1,5 @@
 <script>
-    const myPicture = require("../../img/me.jpg");
+    import myPicture from "../../img/me.jpg";
 </script>
 
 <style>

@@ -1,7 +1,11 @@
+import p2screenshot from "../../img/p2screenshot.png";
+import p1screenshot from "../../img/p1screenshot.png";
+import p3screenshot from "../../img/p3screenshot.png";
+
 const projects = [
     {
         name: "Lodgel",
-        screenshot: require("../../img/p2screenshot.png"),
+        screenshot: p2screenshot,
         description:
             "This is an application to allow property owners and guests to keep track of the progress of cleaning a property.",
         technologies: ["React", "Typescript", "Node.js", "express", "PostgreSQL"],
@@ -10,7 +14,7 @@ const projects = [
     },
     {
         name: "Gotta Catch 'Em All",
-        screenshot: require("../../img/p1screenshot.png"),
+        screenshot: p1screenshot,
         description:
             "This is a little app I made for keeping track of your progress on a nationaldex. I plan to add some more features in the future enjoy!",
         technologies: ["React", "PokeAPI", "NodeJS"],
@@ -19,7 +23,7 @@ const projects = [
     },
     {
         name: "Django Blog",
-        screenshot: require("../../img/p3screenshot.png"),
+        screenshot: p3screenshot,
         description: "A multi-user blogging application.",
         technologies: ["Django Backend", "PostgreSQL", "Django Templating", "Bootstrap 4"],
         github: "https://github.com/freitagdavid/django_blog",

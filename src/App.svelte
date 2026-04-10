@@ -1,5 +1,4 @@
 <script>
-    export let name;
     import "./reset.css";
     import "./global.css";
     import NavBar from "./components/NavBar.svelte";

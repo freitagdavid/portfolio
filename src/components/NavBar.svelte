@@ -1,7 +1,7 @@
 <script>
     import NavLink from "./NavLink.svelte";
     import NavHeader from "./NavHeader.svelte";
-    import { location } from "svelte-spa-router";
+    import { router } from "svelte-spa-router";
 </script>
 
 <style>
@@ -31,8 +31,8 @@
     <NavHeader href="#/">David Freitag</NavHeader>
     <nav>
         <ul>
-            <NavLink href="#/portfolio" active={$location == "/portfolio"}>Portfolio</NavLink>
-            <NavLink href="#/contact" active={$location == "/contact"}>Contact</NavLink>
+            <NavLink href="#/portfolio" active={router.location === "/portfolio"}>Portfolio</NavLink>
+            <NavLink href="#/contact" active={router.location === "/contact"}>Contact</NavLink>
         </ul>
     </nav>
 </header>
