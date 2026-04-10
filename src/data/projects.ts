@@ -1,6 +1,6 @@
-import p1screenshot from '../../img/p1screenshot.png';
-import p2screenshot from '../../img/p2screenshot.png';
-import munchiezScreenshot from '../../img/munchiez-screenshot.png';
+import munchiezScreenshot from '$lib/assets/munchiez-screenshot.png';
+import p1screenshot from '$lib/assets/p1screenshot.png';
+import p2screenshot from '$lib/assets/p2screenshot.png';
 
 export interface Project {
 	name: string;

@@ -19,7 +19,7 @@
         </p>
         <p>
             If you would be interested in talking to me please feel free to
-            <a href="#/contact">contact me</a>
+            <a href="/contact/">contact me</a>
         </p>
     </article>
 {:else}
@@ -43,7 +43,7 @@
         <p class="mb-0 leading-[1.8]">
             If you would be interested in talking to me please feel free to
             <a
-                href="#/contact"
+                href="/contact/"
                 class="font-semibold text-accent no-underline border-b border-accent-soft transition-colors hover:border-accent"
             >contact me</a>
         </p>

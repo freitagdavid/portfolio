@@ -1,6 +1,8 @@
 <script lang="ts">
+    import { base } from "$app/paths";
     import { theme } from "../lib/theme";
-    import myPicture from "../../img/me.jpg";
+
+    const profileSrc = `${base}/img/me.jpg`;
 </script>
 
 {#if $theme === "rpgui"}
@@ -9,7 +11,7 @@
             <div class="portfolio-hero-inner">
                 <div class="rpgui-container framed-grey portfolio-hero-avatar">
                     <img
-                        src={myPicture}
+                        src={profileSrc}
                         alt="David Freitag"
                         width="112"
                         height="112"
@@ -32,7 +34,7 @@
                 class="rounded-full bg-gradient-to-br from-[rgba(13,107,122,0.35)] to-[rgba(26,31,36,0.12)] p-1 shadow-md"
             >
                 <img
-                    src={myPicture}
+                    src={profileSrc}
                     alt="David Freitag"
                     width="112"
                     height="112"
